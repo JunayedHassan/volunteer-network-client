@@ -5,7 +5,7 @@ const AllRegistrations = (props) => {
     const { date, email, event, name, _id } = props.allregistered;
     let history = useHistory();
     const deleteRegistry = (id) => {
-        fetch(`http://localhost:3100/deleteRegistry/${id}`, {
+        fetch(`https://calm-refuge-89683.herokuapp.com/deleteRegistry/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

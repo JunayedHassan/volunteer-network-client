@@ -7,7 +7,7 @@ const Admin = () => {
     const [userRegistry, setUserRegistry] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:3100/event-registers')
+        fetch('https://calm-refuge-89683.herokuapp.com/event-registers')
             .then(res => res.json())
             .then(data => {
                 setUserRegistry(data);

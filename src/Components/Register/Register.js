@@ -9,7 +9,7 @@ const Register = () => {
     const [events, setevents] = useState({})
 
     useEffect(() => {
-        fetch('http://localhost:3100/events')
+        fetch('https://calm-refuge-89683.herokuapp.com/events')
             .then(res => res.json())
             .then(data => {
                 setevents(data);
@@ -35,7 +35,7 @@ const Register = () => {
         const description = document.getElementById("description").value;
         const registerArray = { name, email, date, event, description, specificEventId };
 
-        fetch('http://localhost:3100/addregisters', {
+        fetch('https://calm-refuge-89683.herokuapp.com/addregisters', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(registerArray)

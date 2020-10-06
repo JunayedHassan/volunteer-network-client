@@ -12,7 +12,7 @@ const AddEvent = () => {
 
         const eventArray = { Name, pic, description, eventStarts }
 
-        fetch('http://localhost:3100/addevents', {
+        fetch('https://calm-refuge-89683.herokuapp.com/addevents', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

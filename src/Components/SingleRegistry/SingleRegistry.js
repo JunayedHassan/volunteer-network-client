@@ -6,7 +6,7 @@ const SingleRegistry = (props) => {
     // to get events 
     const [events, setEvents] = useState([])
     useEffect(() => {
-        fetch('http://localhost:3100/events')
+        fetch('https://calm-refuge-89683.herokuapp.com/events')
             .then(res => res.json())
             .then(data => {
                 setEvents(data)
@@ -30,7 +30,7 @@ const SingleRegistry = (props) => {
     const [userRegistry, setUserRegistry] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:3100/event-registers')
+        fetch('https://calm-refuge-89683.herokuapp.com/event-registers')
             .then(res => res.json())
             .then(data => {
                 setUserRegistry(data);
@@ -41,7 +41,7 @@ const SingleRegistry = (props) => {
     //delete registry
     let history = useHistory();
     const deleteEventRegistry = (id) => {
-        fetch(`http://localhost:3100/delete/${id}`, {
+        fetch(`https://calm-refuge-89683.herokuapp.com/delete/${id}`, {
             method: 'DELETE'
         })
         .then( res => res.json())
