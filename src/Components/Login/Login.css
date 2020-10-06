@@ -1,0 +1,12 @@
+.loginNav{
+display: inline;
+
+}
+.Navli{
+display: inline;
+text-decoration: none;
+color: black;
+list-style-type: none;
+/* margin-left: 30px; */
+border: 2px solid red;
+}
